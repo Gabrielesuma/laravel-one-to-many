@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 class Project extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'image', 'content', 'slug'];
+    protected $fillable = ['type_id', 'title', 'image', 'content', 'slug'];
 
     public static function generateSlug($title){
         $slug = Str::slug($title, '-');
@@ -21,5 +21,9 @@ class Project extends Model
         }
        
         return $slug;
+    }
+
+    public function type(){
+        return $this->belongsTo(Type::class);
     }
 }
