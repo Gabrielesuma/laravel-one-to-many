@@ -1,0 +1,28 @@
+@use './partials/variables' as *;
+
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import '~bootstrap/scss/bootstrap';
+
+#admin{
+    height: 100vh;
+    //overflow: hidden;
+    display: flex;
+
+    #sidebar{
+        background-color: blue;
+    }
+
+    #wrapper{
+        flex-grow: 1;
+
+        header{
+            min-height: 70px;
+        }
+    }
+}
